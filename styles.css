@@ -1,0 +1,246 @@
+/* ------------------------------------------------------------ *\
+	Reset
+\* ------------------------------------------------------------ */
+
+* {
+	padding: 0;
+	margin: 0;
+	outline: 0;
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* ------------------------------------------------------------ *\
+	Fonts
+\* ------------------------------------------------------------ */
+
+@font-face {
+    font-family: 'Yaahowu';
+    src: url('fonts/YaahowuItalic-Italic.woff2') format('woff2'),
+        url('fonts/YaahowuItalic-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yaahowu';
+    src: url('fonts/YaahowuBoldItalic-Italic.woff2') format('woff2'),
+        url('fonts/YaahowuBoldItalic-Italic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Yaahowu';
+    src: url('fonts/YaahowuLightItalic-Italic.woff2') format('woff2'),
+        url('fonts/YaahowuLightItalic-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+	font-family: 'Ananda';
+	src: url('fonts/anandaBlack.woff2') format('woff2'),
+		url('fonts/anandaBlack.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Bernardo Moda Contrast';
+    src: url('fonts/BernardoModaContrast.woff2') format('woff2'),
+        url('fonts/BernardoModaContrast.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Bernardo Moda';
+    src: url('fonts/BernardoModa.woff2') format('woff2'),
+        url('fonts/BernardoModa.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bernardo Moda';
+    src: url('fonts/BernardoModaSemibold.woff2') format('woff2'),
+        url('fonts/BernardoModaSemibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ------------------------------------------------------------ *\
+	Shell
+\* ------------------------------------------------------------ */
+
+.shell {
+	max-width: 1200px;
+	margin-inline: auto;
+}
+
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+
+body {
+	font-family: 'Bernardo Moda Contrast', serif;
+	font-size: 28px;
+	color: rgb(171, 136, 102);
+	background-color: #121212;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+a {
+	text-decoration: none;
+	color:inherit;
+	display: inline-block;
+}
+
+ul {
+	list-style-type: none ;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+h5 {
+	font-size: 16px;
+}
+
+h6 {
+	font-size: 12px;
+}
+
+/* ------------------------------------------------------------ *\
+	Header
+\* ------------------------------------------------------------ */
+
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 10px 0;
+	border-bottom: 2px solid rgba(171, 136, 102, 0.3);
+	z-index: 1;
+}
+
+.header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* ------------------------------------------------------------ *\
+	Logo
+\* ------------------------------------------------------------ */
+
+.logo {
+	font-family: 'Ananda', cursive;
+	font-size: 40px;
+	letter-spacing: 0.02em;
+	color: transparent;
+	-webkit-text-stroke: 0.5px rgb(171, 136, 102);
+	transition: 500ms color;
+}
+
+.logo span {
+	color: #fff;
+	-webkit-text-stroke: 0px transparent;
+}
+
+.logo:hover {
+	color: #fff;
+}
+
+/* ------------------------------------------------------------ *\
+	Nav
+\* ------------------------------------------------------------ */
+
+.nav li {
+	display: inline-block;
+}
+
+.nav li + li {
+	margin-left: 45px;
+}
+
+/* ------------------------------------------------------------ *\
+	Hero
+\* ------------------------------------------------------------ */
+
+.hero {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	z-index: -1;
+}
+
+.hero-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;   
+}
+
+/* ------------------------------------------------------------ *\
+	Intro
+\* ------------------------------------------------------------ */
+
+.intro {
+	margin-top: -50px;
+	z-index: 2;
+}
+
+.intro__inner {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+}
+
+.box {
+	min-height: 240px;
+	text-align: center;
+	text-transform: capitalize;
+	background-color: #191919;
+	border: 1px solid rgba(171, 136, 102, 0.3);;
+	border-radius: 10px;
+	padding: 50px 0;
+}
+
+.box img {
+	opacity: 0.5;
+	margin-bottom: 30px;
+}
+
+.box h4 {
+	margin-bottom: 20px;
+}

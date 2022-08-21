@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Bernardo Moda Contrast';
+    src: url('BernardoModaContrast.woff2') format('woff2'),
+        url('BernardoModaContrast.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bernardo Moda';
+    src: url('BernardoModa.woff2') format('woff2'),
+        url('BernardoModa.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bernardo Moda';
+    src: url('BernardoModaSemibold.woff2') format('woff2'),
+        url('BernardoModaSemibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
