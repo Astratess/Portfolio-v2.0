@@ -127,6 +127,7 @@ h6 {
 
 .header__inner {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -139,17 +140,17 @@ h6 {
 	font-family: 'Ananda', cursive;
 	font-size: 2.5rem;
 	letter-spacing: 0.02em;
+	color: #fff;
+	-webkit-text-stroke: 0px transparent;
+}
+
+.logo span {
 	color: transparent;
 	-webkit-text-stroke: 0.5px rgb(171, 136, 102);
 	transition: 500ms color;
 }
 
-.logo span {
-	color: #fff;
-	-webkit-text-stroke: 0px transparent;
-}
-
-.logo:hover {
+.logo:hover span {
 	color: #fff;
 }
 
@@ -261,6 +262,14 @@ h6 {
 }
 
 @media (max-width: 800px) {
+
+	.logo {
+		-webkit-text-stroke: 1px rgb(171, 136, 102);
+	}
+
+	.logo span {
+		display: none;
+	}
 
 	.nav li {
 		font-size: 1.4rem;
