@@ -19,60 +19,33 @@
 \* ------------------------------------------------------------ */
 
 @font-face {
-    font-family: 'Yaahowu';
-    src: url('fonts/YaahowuItalic-Italic.woff2') format('woff2'),
-        url('fonts/YaahowuItalic-Italic.woff') format('woff');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Yaahowu';
-    src: url('fonts/YaahowuBoldItalic-Italic.woff2') format('woff2'),
-        url('fonts/YaahowuBoldItalic-Italic.woff') format('woff');
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Yaahowu';
-    src: url('fonts/YaahowuLightItalic-Italic.woff2') format('woff2'),
-        url('fonts/YaahowuLightItalic-Italic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
 	font-family: 'Ananda';
-	src: url('fonts/anandaBlack.woff2') format('woff2'),
-		url('fonts/anandaBlack.woff') format('woff');
+	src: url('fonts/AnandaBlack.woff2') format('woff2'),
+		url('fonts/AnandaBlack.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'Bernardo Moda Contrast';
-    src: url('fonts/BernardoModaContrast.woff2') format('woff2'),
-        url('fonts/BernardoModaContrast.woff') format('woff');
+	font-family: 'Bernardo Moda Contrast';
+	src: url('fonts/BernardoModaContrast.woff2') format('woff2'),
+		url('fonts/BernardoModaContrast.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'Bernardo Moda';
-    src: url('fonts/BernardoModa.woff2') format('woff2'),
-        url('fonts/BernardoModa.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'Bernardo Moda';
+	src: url('fonts/BernardoModa.woff2') format('woff2'),
+		url('fonts/BernardoModa.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-    font-family: 'Bernardo Moda';
-    src: url('fonts/BernardoModaSemibold.woff2') format('woff2'),
-        url('fonts/BernardoModaSemibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+	font-family: 'Bernardo Moda';
+	src: url('fonts/BernardoModaSemibold.woff2') format('woff2'),
+		url('fonts/BernardoModaSemibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
 }
 
 
