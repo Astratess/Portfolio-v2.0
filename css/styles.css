@@ -226,9 +226,9 @@ h6 {
 \* ------------------------------------------------------------ */
 
 .intro {
-	margin-top: -50px;
 	z-index: 2;
 	background-color: #121212;
+	padding-bottom: 100px;
 }
 
 .intro__inner {
@@ -261,6 +261,146 @@ h6 {
 	box-shadow: 3px 3px 10px #e29c1a;
 }
 
+/* ------------------------------------------------------------ *\
+	About me
+\* ------------------------------------------------------------ */
+
+.about-me {
+	width: 100%;
+	background-color: #121212;
+	padding: 100px 0;
+}
+
+.about-me__inner {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: flex-start;
+	height: 100%;
+}
+
+.about-me__content img {
+	width: 400px;
+	height: 600px;
+}
+
+/* ------------------------------------------------------------ *\
+	Clock
+\* ------------------------------------------------------------ */
+
+.clock {
+	position: relative; 
+	width: 560px;
+	height: 560px;
+}
+
+.numbers {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.cog1, .cog2, .cog3, .cog4, .cog5, .cog6, .cog7, .cog8, .cog-orange, .arrow-short, .arrow-long, .arrow-seconds {
+	position: absolute;
+}
+
+
+.cog1 {
+	bottom: 436px;
+	left: 104px;
+	transition: 0.25s;
+}
+
+.cog2 {
+	bottom: 400px;
+	left: 133px;
+	transition: 0.25s;
+}
+
+.cog3 {
+	bottom: 297px;
+	left: 93px;
+	transition: 0.25s;
+}
+
+.cog4 {
+	bottom: 332px;
+	left: 196px;
+	transition: 0.25s;
+}
+
+.cog5 {
+	bottom: 228px;
+	left: 324px;
+	transition: 0.25s;
+}
+
+.cog6 {
+	bottom: 128px;
+	left: 180px;
+	transition: 0.25s;
+}
+
+.cog7 {
+	bottom: 60px;
+	left: 250;
+	transition: 0.25s;
+}
+
+.cog8 {
+	bottom: 12px;
+	left: 226px;
+	transition: 0.25s;
+}
+
+.cog-orange {
+	bottom: 210px;
+	left: 200px;
+	z-index: 1;
+	transition: 0.25s;
+}
+.arrow-short {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.arrow-long {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+} 
+
+.arrow-seconds {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* ------------------------------------------------------------ *\
+	Projects
+\* ------------------------------------------------------------ */
+
+.projects {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+}
+
+.projects-bg img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 @media (max-width: 800px) {
 
 	.logo {
@@ -283,7 +423,12 @@ h6 {
 		display: none;
 	}
 
-	.intro__inner {
+	.intro__inner,
+	.about-me__inner {
 		grid-template-columns: 1fr;
+	}
+
+	.clock{
+		transform: scale(0.35);
 	}
 }
