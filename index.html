@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link rel="stylesheet" href="css/styles.css">
+
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	
 	<title>Astrates</title>
 </head>
@@ -38,9 +40,14 @@
 	</header><!-- /.header -->
 
 	<section class="hero">
-		<img src="css/images/hero-bg.png" width="" height="" class="hero-bg" alt="">
+		<figure class="hero-bg">
+			<img src="css/images/hero-bg.png" width="200" height="200" alt="">
+		</figure><!-- /.hero-bg -->
 
-		<img src="css/images/hero-bg-z1.png" width="" height="" class="hero-bg-z1" alt="">
+		<figure class="hero-bg-z1">
+			<img src="css/images/hero-bg-z1.png" width="200" height="200" alt="">
+		</figure><!-- /.hero-bg-z1 -->
+
 		<div class="shell">
 			<div class="hero__inner">
 				<h1></h1>
@@ -53,7 +60,7 @@
 	<section class="intro">
 		<div class="shell">
 			<div class="intro__inner">
-				<div class="box">
+				<a href="#" class="box" data-aos="fade-up" data-aos-duration="500">
 					<figure>
 						<img src="css/images/icon-brush.png" width="80" height="80" alt="">
 					</figure>
@@ -63,9 +70,9 @@
 						
 						<p>Poetry | Drawings | games</p>
 					</div><!-- /.box__inner -->
-				</div><!-- /.box -->
+				</a><!-- /.box -->
 				
-				<div class="box">
+				<a href="#" class="box" data-aos="fade-up" data-aos-duration="700">
 					<figure>
 						<img src="css/images/icon-web-dev.png" width="80" height="80" alt="">
 					</figure>
@@ -75,9 +82,9 @@
 						
 						<p>Apps | Websites | Shops</p>
 					</div><!-- /.box__inner -->
-				</div><!-- /.box -->
+				</a><!-- /.box -->
 				
-				<div class="box">
+				<a href="#" class="box" data-aos="fade-up" data-aos-duration="900">
 					<figure>
 						<img src="css/images/icon-bulb.png" width="80" height="80" alt="">
 					</figure>
@@ -87,7 +94,7 @@
 						
 						<p>Positivity | Ideas | Motivation</p>
 					</div><!-- /.box__inner -->
-				</div><!-- /.box -->
+				</a><!-- /.box -->
 			</div><!-- /.intro__inner -->
 		</div><!-- /.shell -->
 	</section><!-- /.intro -->
@@ -137,7 +144,7 @@
 					<img src="css/images/cave.png" alt="">
 				</figure><!-- /.about-me-bg -->
 
-				<div class="crystal-box">
+				<div class="crystal-box crystal-box--1"  data-aos="zoom-in-left" data-aos-duration="500">
 					<figure class="crystal">
 						<img src="css/images/crystal.png" alt="">
 					</figure><!-- /.crystal -->
@@ -157,7 +164,7 @@
 					</span>
 				</div><!-- /.crystal-box -->
 				
-				<div class="crystal-box-2">
+				<div class="crystal-box crystal-box--2" data-aos="zoom-in-right" data-aos-duration="700">
 					<figure class="crystal">
 						<img src="css/images/crystal-fliped.png" alt="">
 					</figure><!-- /.crystal -->
@@ -177,7 +184,7 @@
 					</span>
 				</div><!-- /.crystal-box -->
 
-				<div class="crystal-box-3">
+				<div class="crystal-box crystal-box--3"  data-aos="fade-up" data-aos-duration="1000">
 					<figure class="crystal">
 						<img src="css/images/crystal.png" alt="">
 					</figure><!-- /.crystal -->
@@ -200,6 +207,9 @@
 		</div><!-- /.shell -->
 	</section><!-- /.projects -->
 
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<script src="js/clock.js"></script>
 </body>
+<script> AOS.init(); </script>
 </html>
