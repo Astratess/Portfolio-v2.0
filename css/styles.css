@@ -55,7 +55,7 @@
 
 .shell {
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1400px;
 	margin-inline: auto;
 }
 
@@ -66,7 +66,7 @@
 body {
 	font-family: 'Bernardo Moda Contrast', serif;
 	font-size: 28px;
-	color: rgb(171, 136, 102);
+	color: rgb(171, 136, 102);;
 	background-color: #121212;
 	overflow-x: hidden;
 }
@@ -90,7 +90,8 @@ h1 {
 }
 
 h2 {
-	font-size: 1.75rem;
+	font-size: 4rem;
+	font-family: 'Bernardo Moda', serif
 }
 
 h3 {
@@ -116,14 +117,15 @@ h6 {
 \* ------------------------------------------------------------ */
 
 .header {
+	font-family: 'Bernardo Moda Contrast', serif;
 	position: fixed;
 	width: 100%;
 	top: 0;
 	left: 0;
 	background-color: rgba(0, 0, 0, 0.3);
 	padding: 10px 0;
-	border-bottom: 2px solid rgba(171, 136, 102, 0.3);
-	z-index: 1;
+	border-bottom: 2px solid rgba(171, 136, 102, 0.6);;
+	z-index: 20;
 	animation: 2s fade-down linear;
 }
 
@@ -160,12 +162,13 @@ h6 {
 
 .logo span {
 	color: transparent;
-	-webkit-text-stroke: 0.5px rgb(171, 136, 102);
-	transition: 500ms color;
+	-webkit-text-stroke: 0.5px rgb(171, 136, 102);;
+	transition: 500ms color, 500ms -webkit-text-stroke;
 }
 
 .logo:hover span {
 	color: #fff;
+	-webkit-text-stroke: 0.5px transparent;
 }
 
 /* ------------------------------------------------------------ *\
@@ -275,6 +278,7 @@ h6 {
 }
 
 .box img {
+	filter: drop-shadow(0 0 10px #efa728);
 	opacity: 0.5;
 	margin-bottom: 30px;
 }
@@ -302,13 +306,12 @@ h6 {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: center;
-	align-items: flex-start;
+	align-items: center;
 	height: 100%;
 }
 
-.about-me__content img {
-	width: 300px;
-	height: 500px;
+.about-me__content{
+	text-align: center;
 }
 
 /* ------------------------------------------------------------ *\
@@ -447,7 +450,6 @@ h6 {
 	top: 0;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
 	z-index: -1;
 	animation: 5s fade-hero ease-in-out; linear ;
 }
@@ -471,10 +473,10 @@ h6 {
 .crystal-box--3 {
 	right: 20%;
 	bottom: 65%;
-	animation: 5s float 2s ease-in-out infinite;
+	animation: 5s float3 2s ease-in-out infinite;
 }
 
-.crystal-box:hover .crystal {
+.crystal-box:hover .crystal,.crystal-box:focus .crystal {
 	filter: drop-shadow(0 0 50px goldenrod) brightness(1.3);
 }
 
@@ -570,20 +572,320 @@ h6 {
 
 @keyframes float2 {
 	0% {
-		transform: translateY(0px) rotate(-10deg);;
+		transform: translateY(0px) rotate(-10deg) scale(0.75);
 	}
 
 	50% {
-		transform: translateY(-15px) rotate(-10deg);;
+		transform: translateY(-15px) rotate(-10deg) scale(0.75);
 	}
 
 	100% {
-		transform: translateY(0px) rotate(-10deg);;
+		transform: translateY(0px) rotate(-10deg) scale(0.75);
 	}
 }
+
+@keyframes float3 {
+	0% {
+		transform: translateY(0px) rotate(10deg) scale(0.85);
+	}
+
+	50% {
+		transform: translateY(-15px) rotate(10deg) scale(0.85);
+	}
+
+	100% {
+		transform: translateY(0px) rotate(10deg) scale(0.85);
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Section-content
+\* ------------------------------------------------------------ */
+
+.section-content {
+	height: 100vh;
+	background-color: #121212;
+}
+
+/* ------------------------------------------------------------ *\
+	Section-waterfall
+\* ------------------------------------------------------------ */
+
+.section-waterfall {
+	background-color: darkgray;
+	height: 100vh;
+	position: relative;
+}
+
+.waterfall-bg,
+.waterfall-mask {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.waterfall-mask{
+	z-index: 10;
+}
+
+.waterfall-bg img,
+.waterfall-mask img {
+	width: 100%;
+	height: 100%;
+	object-position: bottom right;
+	display: block;
+}
+
+/* ------------------------------------------------------------ *\
+	Leaves
+\* ------------------------------------------------------------ */
+
+#leaves {
+	position:absolute;
+	top:30%;
+	right: 10%;
+	width:100%;
+	text-align: right;
+	z-index: 1;
+}
+
+#leaves i {
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    background: linear-gradient(to bottom right, #309900, #005600);
+    transform: skew(20deg);
+    border-radius: 5% 40% 70%;
+    box-shadow: inset 0px 0px 1px #222;
+    border: 1px solid #333;
+    z-index: 1;
+    -webkit-animation: falling 5s 0s infinite;
+}
+
+#leaves i:nth-of-type(2n) { -webkit-animation: falling2 5s 0s infinite; }
+#leaves i:nth-of-type(3n) { -webkit-animation: falling3 5s 0s infinite; }
+
+#leaves i:before {
+  position: absolute;
+  content: '';
+  top: 117px;
+  right: 9px;
+  height: 27px;
+  width: 32px;
+  transform: rotate(49deg);
+  border-radius: 0% 15% 15% 0%;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+  border-left: 0px solid #222;
+  border-right: 1px solid #222;
+  background: linear-gradient(to right, rgba(0,100,0,1), #005600);
+  z-index: 1;
+}
+
+#leaves i:after {
+  content: '';
+  height: 125px;
+  width: 10px;
+  background: linear-gradient(to right, rgba(0,0,0,.15), rgba(0,0,0,0));
+  display: block;
+  transform: rotate(125deg);
+  position: absolute;
+  left: 85px;
+  border-radius:50%;
+}
+
+
+#leaves i:nth-of-type(n)    { height:23px; width:30px; }
+#leaves i:nth-of-type(n):before { width:7px; height:5px; top:17px; right:1px; }
+#leaves i:nth-of-type(n):after { width:2px; height:17px; left: 12px; top:0px; }
+
+#leaves i:nth-of-type(2n+1)    { height:11px; width:16px; }
+#leaves i:nth-of-type(2n+1):before { width:4px; height:3px; top:7px; right:0px; }
+#leaves i:nth-of-type(2n+1):after { width:2px; height:6px; left: 5px; top:1px; }
+
+#leaves i:nth-of-type(3n+2)  { height:17px; width:23px; }
+#leaves i:nth-of-type(3n+2):before  { height:4px; width:4px; top:12px; right:1px; }
+#leaves i:nth-of-type(3n+2):after  { height:10px; width:2px; top:1px; left:8px; }
+
+#leaves i:nth-of-type(n)   { -webkit-animation-delay: 1.9s;}
+#leaves i:nth-of-type(2n)  { -webkit-animation-delay: 3.9s;}
+#leaves i:nth-of-type(3n)  { -webkit-animation-delay: 2.3s;}
+#leaves i:nth-of-type(4n)  { -webkit-animation-delay: 4.4s;}
+#leaves i:nth-of-type(5n)  { -webkit-animation-delay: 5s;  }
+#leaves i:nth-of-type(6n)  { -webkit-animation-delay: 3.5s;}
+#leaves i:nth-of-type(7n)  { -webkit-animation-delay: 2.8s;}
+#leaves i:nth-of-type(8n)  { -webkit-animation-delay: 1.5s;}
+#leaves i:nth-of-type(9n)  { -webkit-animation-delay: 3.3s;}
+#leaves i:nth-of-type(10n) { -webkit-animation-delay: 2.5s;}
+#leaves i:nth-of-type(11n) { -webkit-animation-delay: 1.2s;}
+#leaves i:nth-of-type(12n) { -webkit-animation-delay: 4.1s;}
+#leaves i:nth-of-type(13n) { -webkit-animation-delay: 1s;  }
+#leaves i:nth-of-type(14n) { -webkit-animation-delay: 4.7s;}
+#leaves i:nth-of-type(15n) { -webkit-animation-delay: 3s;  }
+
+#leaves i:nth-of-type(n)    { background: linear-gradient(to bottom right, #309900, #005600); }
+#leaves i:nth-of-type(2n+2)  { background: linear-gradient(to bottom right, #5e9900, #2b5600); }
+#leaves i:nth-of-type(4n+1)  { background: linear-gradient(to bottom right, #990, #564500); }
+
+#leaves i:nth-of-type(n)    { opacity: .7;}
+#leaves i:nth-of-type(3n+1)  { opacity: .5;}
+#leaves i:nth-of-type(3n+2)  { opacity: .3;}
+
+#leaves i:nth-of-type(n)    {transform: rotate(180deg);}
+
+
+#leaves i:nth-of-type(n) { -webkit-animation-timing-function:ease-in-out;}
+
+@keyframes falling {
+    
+    0% {
+        -webkit-transform:
+            translate3d(300,0,0)
+            rotate(0deg);
+    }
+    
+    100% {
+        -webkit-transform:
+            translate3d(-350px,300px,0)
+            rotate(90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes falling3 {
+     0% {
+        -webkit-transform:
+            translate3d(0,0,0)
+            rotate(-20deg);
+    }
+    
+    100% {
+        -webkit-transform:
+            translate3d(-230px,340px,0)
+            rotate(-70deg);
+        opacity: 0;
+    }
+}
+
+@keyframes falling2 {
+     0% {
+        -webkit-transform:
+            translate3d(0,0,0)
+            rotate(90deg);
+    }
+    
+    100% {
+        -webkit-transform:
+            translate3d(-400px,380px,0)
+            rotate(0deg);
+        opacity: 0;
+    }
+}
+
+
+/* ------------------------------------------------------------ *\
+	Waterfall
+\* ------------------------------------------------------------ */
+
+.waterfall-container {
+	position: absolute;
+	bottom: 0;
+	left: -12%;
+	height: 80vh;
+	aspect-ratio: 1;
+}
+
+.waterfall {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.rocks, 
+.bubbles,
+.flow,
+.water {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.bubbles {
+	z-index: 3;
+}
+
+.bubbles img {
+	animation: 3s bubbles ease-in-out infinite;
+}
+
+.rocks {
+	z-index: 2;
+}
+
+.flow {
+	background: url('images/flow2.png');
+	height: 80%;
+	width: 30%;
+	top: 6%;
+	left: 37%;
+	z-index: 1;
+	border-radius: 20px;
+	overflow: hidden;
+	animation: waterfallloop 5s infinite linear;
+}
+
+.rocks img,
+.bubbles img,
+.water img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover; 
+}
+
+@keyframes waterfallloop {
+	0% { 
+		background-position:0 0; 
+ 	}
+
+	100% { 
+		background-position: 0 1112px; 
+	}
+}
+
+@keyframes bubbles {
+	0% {
+		transform: scale(1.0) itranslateY(0px);
+		filter: drop-shadow(0 0 30px #b1d2e4) brightness(1);
+	}
+
+	50% {
+		transform: scale(1.02) translateY(-8px);
+		filter: drop-shadow(0 0 50px #b1d2e4) brightness(1.1);
+	}
+
+	100% {
+		transform: scale(1.0) translateY(0px);
+		filter: drop-shadow(0 0 30px #b1d2e4) brightness(1);
+	}
+}
+
 /* ------------------------------------------------------------ *\
 	Media
 \* ------------------------------------------------------------ */
+
+@media (max-width: 1200px) {
+	.projects-bg img,
+	.waterfall-bg img,
+	.waterfall-mask img {
+		object-fit: cover;
+	}
+
+	.waterfall-container {
+		display: none;
+	}
+}
 
 @media (max-width: 800px) {
 
