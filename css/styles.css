@@ -113,6 +113,118 @@ h6 {
 }
 
 /* ------------------------------------------------------------ *\
+	Modal
+\* ------------------------------------------------------------ */
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 30;
+	background-color: rgba(0,0,0,0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	pointer-events: none;
+	transition:1000ms opacity;
+}
+
+/* ------------------------------------------------------------ *\
+	Form
+\* ------------------------------------------------------------ */
+
+.form {
+	position: relative;
+	width: 80%;
+	max-width: 550px;
+	padding: 20px;
+	border-top: 2px solid rgb(171, 136, 102);
+	border-bottom: 2px solid rgb(171, 136, 102);
+	border-radius: 10px;
+	background-color: #121212;
+	box-shadow: 0 0 15px rgb(171, 136, 102);;
+}
+
+.form .btn-circle {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+.form .form__label {
+	position: relative;
+	display: inline-block;
+}
+
+.form .form__label:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: rgb(171, 136, 102);
+}
+
+.form .form__controls {
+	margin-top: 20px;
+}
+
+.form .form__row + .form__row {
+	margin-top: 10px;
+}
+
+.form .form__actions {
+	text-align: right;
+	margin-top: 30px;
+	padding-right: 10px;
+}
+
+.form .form__btn {
+	font-family: 'Bernardo Moda Contrast', serif;
+	font-size: 24px;
+	color: rgb(171, 136, 102);
+	background-color: transparent;
+	border: none;
+}
+
+/* ------------------------------------------------------------ *\
+	Field
+\* ------------------------------------------------------------ */
+
+.field {
+	font-family: 'Bernardo Moda Contrast', serif;
+	height: 40px;
+	width: 100%;
+	background-color: #121212;
+	padding-inline: 15px;
+	font-size: 28px;
+	color: rgb(171, 136, 102);
+	border: transparent;
+	border-bottom: 2px solid rgb(171, 136, 102);
+	border-top: 2px solid rgb(171, 136, 102);
+	transition: 500ms background-color;
+	border-radius: 10px;
+}
+
+.field:focus {
+	background-color: rgba(171, 136, 102, 0.1);
+}
+
+.field--textarea {
+	height: 150px;
+	padding: 15px;
+	resize: none;
+}
+
+::placeholder {
+	color: rgb(171, 136, 102);;
+}
+
+/* ------------------------------------------------------------ *\
 	Header
 \* ------------------------------------------------------------ */
 
@@ -191,6 +303,7 @@ h6 {
 	position: relative;
 	overflow: hidden;
 	padding: 3px 0;
+	display: inline-block;
 }
 
 .btn:before {
@@ -207,6 +320,34 @@ h6 {
 
 .btn:hover:before {
 	transform: translateX(0%);
+}
+
+.btn-circle, #btn-play {
+	border: none;
+	background-color: rgb(171, 136, 102);
+	padding: 5px;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+	cursor: pointer;
+	transition: 500ms background-color;
+}
+
+.btn-circle:hover {
+	background-color: #fff;
+}
+
+.btn-circle svg {
+	color: #121212;
+	width: 20px;
+	height: 20px;
+}
+
+.header-buttons {
+	display: flex;
+	align-items: center;
 }
 
 /* ------------------------------------------------------------ *\
@@ -321,7 +462,7 @@ h6 {
 .clock {
 	position: relative; 
 	aspect-ratio: 1 / 1;
-	width: 100%;
+	width: 80%;
 	height: auto;;
 	object-fit: cover;
 	margin-inline: auto;
@@ -442,16 +583,15 @@ h6 {
 	position: relative;
 	height: 100vh;
 	width: 100%;
+	background-color: #121212;
 }
 
 .projects-bg img {
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: -1px;
 	width: 100%;
 	height: 100%;
-	z-index: -1;
-	animation: 5s fade-hero ease-in-out; linear ;
 }
 
 .crystal-box {
@@ -621,7 +761,7 @@ h6 {
 .waterfall-mask {
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: -1px;
 	width: 100%;
 	height: 100%;
 }
@@ -637,6 +777,92 @@ h6 {
 	object-position: bottom right;
 	display: block;
 }
+
+/* ------------------------------------------------------------ *\
+	Waterfall
+\* ------------------------------------------------------------ */
+
+.waterfall-container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 20vw;
+	height: 100vh;
+}
+
+.waterfall-2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+}
+
+.flow-2, .water-2, .bubbles-2 {
+	position: absolute;
+}
+
+.flow-2 {
+	background: url('images/flow2.png');
+	z-index: 1;
+	animation: waterfallloop 5s infinite linear;
+}
+
+.flow-2,
+.water-2 {
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 95%;
+}
+
+.bubbles-2 {
+	bottom: 1.4%;
+	left: 1%;
+	width: 100%;
+	z-index: 2;
+}
+
+.bubbles-2 img {
+	animation: 3s bubbles ease-in-out infinite;
+}
+
+.flow-2 img,
+.water-2 img,
+.bubbles-2 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+@keyframes waterfallloop {
+	0% { 
+		background-position:0 0; 
+ 	}
+
+	100% { 
+		background-position: 0 1112px; 
+	}
+}
+
+@keyframes bubbles {
+	0% {
+		transform: scale(1.0) itranslateY(0px);
+		filter: drop-shadow(0 0 30px #b1d2e4) brightness(1);
+	}
+
+	50% {
+		transform: scale(1.02) translateY(-4px);
+		filter: drop-shadow(0 0 50px #b1d2e4) brightness(1.05);
+	}
+
+	100% {
+		transform: scale(1.0) translateY(0px);
+		filter: drop-shadow(0 0 30px #b1d2e4) brightness(1);
+	}
+}
+
 
 /* ------------------------------------------------------------ *\
 	Leaves
@@ -784,93 +1010,6 @@ h6 {
     }
 }
 
-
-/* ------------------------------------------------------------ *\
-	Waterfall
-\* ------------------------------------------------------------ */
-
-.waterfall-container {
-	position: absolute;
-	bottom: 0;
-	left: -12%;
-	height: 80vh;
-	aspect-ratio: 1;
-}
-
-.waterfall {
-	position: relative;
-	width: 100%;
-	height: 100%;
-}
-
-.rocks, 
-.bubbles,
-.flow,
-.water {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
-
-.bubbles {
-	z-index: 3;
-}
-
-.bubbles img {
-	animation: 3s bubbles ease-in-out infinite;
-}
-
-.rocks {
-	z-index: 2;
-}
-
-.flow {
-	background: url('images/flow2.png');
-	height: 80%;
-	width: 30%;
-	top: 6%;
-	left: 37%;
-	z-index: 1;
-	border-radius: 20px;
-	overflow: hidden;
-	animation: waterfallloop 5s infinite linear;
-}
-
-.rocks img,
-.bubbles img,
-.water img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover; 
-}
-
-@keyframes waterfallloop {
-	0% { 
-		background-position:0 0; 
- 	}
-
-	100% { 
-		background-position: 0 1112px; 
-	}
-}
-
-@keyframes bubbles {
-	0% {
-		transform: scale(1.0) itranslateY(0px);
-		filter: drop-shadow(0 0 30px #b1d2e4) brightness(1);
-	}
-
-	50% {
-		transform: scale(1.02) translateY(-8px);
-		filter: drop-shadow(0 0 50px #b1d2e4) brightness(1.1);
-	}
-
-	100% {
-		transform: scale(1.0) translateY(0px);
-		filter: drop-shadow(0 0 30px #b1d2e4) brightness(1);
-	}
-}
-
 /* ------------------------------------------------------------ *\
 	Media
 \* ------------------------------------------------------------ */
@@ -880,10 +1019,6 @@ h6 {
 	.waterfall-bg img,
 	.waterfall-mask img {
 		object-fit: cover;
-	}
-
-	.waterfall-container {
-		display: none;
 	}
 }
 
@@ -914,9 +1049,6 @@ h6 {
 		grid-template-columns: 1fr;
 	}
 
-	.clock {
-		width: 70%;
-	}
 
 	.crystal {
 		width:  87.5px;
