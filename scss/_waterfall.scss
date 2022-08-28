@@ -1,0 +1,84 @@
+/* ------------------------------------------------------------ *\
+	Waterfall
+\* ------------------------------------------------------------ */
+
+.waterfall-container {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 20vw;
+	height: 100vh;
+}
+
+.waterfall-2 {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+}
+
+.flow-2, .water-2, .bubbles-2 {
+	position: absolute;
+}
+
+.flow-2 {
+	background: url('images/flow2.png');
+	z-index: 1;
+	animation: waterfallloop 5s infinite linear;
+}
+
+.flow-2,
+.water-2 {
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	width: 80%;
+	height: 95%;
+}
+
+.bubbles-2 {
+	bottom: 1.4%;
+	left: 1%;
+	width: 100%;
+	z-index: 2;
+}
+
+.bubbles-2 img {
+	animation: 3s bubbles ease-in-out infinite;
+}
+
+.flow-2 img,
+.water-2 img,
+.bubbles-2 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+@keyframes waterfallloop {
+	0% { 
+		background-position:0 0; 
+ 	}
+
+	100% { 
+		background-position: 0 1112px; 
+	}
+}
+
+@keyframes bubbles {
+	0% {
+		transform: scale(1.0) itranslateY(0px);
+		filter: drop-shadow(0 0 30px #b1d2e4) brightness(1);
+	}
+
+	50% {
+		transform: scale(1.02) translateY(-4px);
+		filter: drop-shadow(0 0 50px #b1d2e4) brightness(1.05);
+	}
+
+	100% {
+		transform: scale(1.0) translateY(0px);
+		filter: drop-shadow(0 0 30px #b1d2e4) brightness(1);
+	}
+}

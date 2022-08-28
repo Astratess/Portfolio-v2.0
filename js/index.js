@@ -1,14 +1,12 @@
-const form = document.getElementById('form')
-	  modal = document.getElementById('modal')
-	  buttonClose = document.getElementById('btn-close')
-	  buttonContact = document.getElementById('contact')
+function loadScript(url)
+{    
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+    head.appendChild(script);
+}
 
-buttonClose.addEventListener('click', ()=>{
-	modal.style.opacity = "0"
-	modal.style.pointerEvents = 'none'
-})
-
-buttonContact.addEventListener('click', ()=>{
-	modal.style.opacity = "1"
-	modal.style.pointerEvents = 'auto'
-})
+loadScript('/js/clock.js')
+loadScript('/js/modal.js')
+loadScript('/js/sound.js')

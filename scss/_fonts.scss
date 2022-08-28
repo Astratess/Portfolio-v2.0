@@ -1,0 +1,33 @@
+/* ------------------------------------------------------------ *\
+	Fonts
+\* ------------------------------------------------------------ */
+
+@font-face {
+	font-family: 'Ananda';
+	src: url('fonts/AnandaBlack.woff2') format('woff2'),
+		url('fonts/AnandaBlack.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Bernardo Moda Contrast';
+	src: url('fonts/BernardoModaContrast.woff2') format('woff2'),
+		url('fonts/BernardoModaContrast.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Bernardo Moda';
+	src: url('fonts/BernardoModa.woff2') format('woff2'),
+		url('fonts/BernardoModa.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Bernardo Moda';
+	src: url('fonts/BernardoModaSemibold.woff2') format('woff2'),
+		url('fonts/BernardoModaSemibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}

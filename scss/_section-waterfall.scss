@@ -1,0 +1,30 @@
+/* ------------------------------------------------------------ *\
+	Section-waterfall
+\* ------------------------------------------------------------ */
+
+.section-waterfall {
+	background-color: darkgray;
+	height: 100vh;
+	position: relative;
+}
+
+.waterfall-bg,
+.waterfall-mask {
+	position: absolute;
+	left: 0;
+	top: -1px;
+	width: 100%;
+	height: 100%;
+}
+
+.waterfall-mask{
+	z-index: 10;
+}
+
+.waterfall-bg img,
+.waterfall-mask img {
+	width: 100%;
+	height: 100%;
+	object-position: bottom right;
+	display: block;
+}

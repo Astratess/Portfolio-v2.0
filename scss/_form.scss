@@ -1,0 +1,58 @@
+/* ------------------------------------------------------------ *\
+	Form
+\* ------------------------------------------------------------ */
+
+.form {
+	position: relative;
+	width: 80%;
+	max-width: 550px;
+	padding: 20px;
+	border-top: 2px solid rgb(171, 136, 102);
+	border-bottom: 2px solid rgb(171, 136, 102);
+	border-radius: 10px;
+	background-color: #121212;
+	box-shadow: 0 0 15px rgb(171, 136, 102);;
+}
+
+.form .btn-circle {
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+.form .form__label {
+	position: relative;
+	display: inline-block;
+}
+
+.form .form__label:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: rgb(171, 136, 102);
+}
+
+.form .form__controls {
+	margin-top: 20px;
+}
+
+.form .form__row + .form__row {
+	margin-top: 10px;
+}
+
+.form .form__actions {
+	text-align: right;
+	margin-top: 30px;
+	padding-right: 10px;
+}
+
+.form .form__btn {
+	font-family: 'Bernardo Moda Contrast', serif;
+	font-size: 24px;
+	color: rgb(171, 136, 102);
+	background-color: transparent;
+	border: none;
+}

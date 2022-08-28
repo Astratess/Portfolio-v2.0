@@ -1,0 +1,285 @@
+/* ------------------------------------------------------------ *\
+	Reset
+\* ------------------------------------------------------------ */
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+/* ------------------------------------------------------------ *\
+	Fonts
+\* ------------------------------------------------------------ */
+@font-face {
+  font-family: 'Ananda';
+  src: url("fonts/AnandaBlack.woff2") format("woff2"), url("fonts/AnandaBlack.woff") format("woff"); }
+@font-face {
+  font-family: 'Bernardo Moda Contrast';
+  src: url("fonts/BernardoModaContrast.woff2") format("woff2"), url("fonts/BernardoModaContrast.woff") format("woff"); }
+@font-face {
+  font-family: 'Bernardo Moda';
+  src: url("fonts/BernardoModa.woff2") format("woff2"), url("fonts/BernardoModa.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+@font-face {
+  font-family: 'Bernardo Moda';
+  src: url("fonts/BernardoModaSemibold.woff2") format("woff2"), url("fonts/BernardoModaSemibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+body {
+  font-family: 'Bernardo Moda Contrast', serif;
+  font-size: 28px;
+  color: #ab8866;
+  background-color: #121212;
+  overflow-x: hidden; }
+
+body::-webkit-scrollbar {
+  display: none; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block; }
+
+ul {
+  list-style-type: none; }
+
+h1 {
+  font-size: 2rem;
+  color: #e59c19; }
+
+h2 {
+  font-size: 4rem;
+  font-family: 'Bernardo Moda', serif; }
+
+h3 {
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 1.25rem;
+  color: #fff;
+  text-transform: uppercase; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.75rem; }
+
+/* ------------------------------------------------------------ *\
+	Shell
+\* ------------------------------------------------------------ */
+.shell {
+  width: 90%;
+  max-width: 1400px;
+  margin-inline: auto; }
+
+/* ------------------------------------------------------------ *\
+	Modal
+\* ------------------------------------------------------------ */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 30;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 1000ms opacity; }
+
+/* ------------------------------------------------------------ *\
+	Form
+\* ------------------------------------------------------------ */
+.form {
+  position: relative;
+  width: 80%;
+  max-width: 550px;
+  padding: 20px;
+  border-top: 2px solid #ab8866;
+  border-bottom: 2px solid #ab8866;
+  border-radius: 10px;
+  background-color: #121212;
+  box-shadow: 0 0 15px #ab8866; }
+
+.form .btn-circle {
+  position: absolute;
+  right: 15px;
+  top: 15px; }
+
+.form .form__label {
+  position: relative;
+  display: inline-block; }
+
+.form .form__label:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ab8866; }
+
+.form .form__controls {
+  margin-top: 20px; }
+
+.form .form__row + .form__row {
+  margin-top: 10px; }
+
+.form .form__actions {
+  text-align: right;
+  margin-top: 30px;
+  padding-right: 10px; }
+
+.form .form__btn {
+  font-family: 'Bernardo Moda Contrast', serif;
+  font-size: 24px;
+  color: #ab8866;
+  background-color: transparent;
+  border: none; }
+
+/* ------------------------------------------------------------ *\
+	Field
+\* ------------------------------------------------------------ */
+.field {
+  font-family: 'Bernardo Moda Contrast', serif;
+  height: 40px;
+  width: 100%;
+  background-color: #121212;
+  padding-inline: 15px;
+  font-size: 28px;
+  color: #ab8866;
+  border: transparent;
+  border-bottom: 2px solid #ab8866;
+  border-top: 2px solid #ab8866;
+  transition: 500ms background-color;
+  border-radius: 10px; }
+
+.field:focus {
+  background-color: rgba(171, 136, 102, 0.1); }
+
+.field--textarea {
+  height: 150px;
+  padding: 15px;
+  resize: none; }
+
+::placeholder {
+  color: #ab8866; }
+
+/* ------------------------------------------------------------ *\
+	Header
+\* ------------------------------------------------------------ */
+.header {
+  font-family: 'Bernardo Moda Contrast', serif;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 0;
+  border-bottom: 2px solid rgba(171, 136, 102, 0.6);
+  z-index: 20;
+  transform: translateY(-101%);
+  animation: 2s fade-down 2s ease-in forwards; }
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-101%); }
+  to {
+    opacity: 1;
+    transform: translateY(0%); } }
+.header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center; }
+
+/* ------------------------------------------------------------ *\
+	Logo
+\* ------------------------------------------------------------ */
+.logo {
+  font-family: 'Ananda', cursive;
+  font-size: 2.5rem;
+  letter-spacing: 0.02em;
+  color: #fff;
+  -webkit-text-stroke: 0px transparent;
+  margin-right: 30px; }
+
+.logo span {
+  color: transparent;
+  -webkit-text-stroke: 0.5px #ab8866;
+  transition: 500ms color, 500ms -webkit-text-stroke; }
+
+.logo:hover span {
+  color: #fff;
+  -webkit-text-stroke: 0.5px transparent; }
+
+/* ------------------------------------------------------------ *\
+	Nav
+\* ------------------------------------------------------------ */
+.nav li {
+  display: inline-block; }
+
+.nav li + li {
+  margin-left: 45px; }
+
+/* ------------------------------------------------------------ *\
+	Button
+\* ------------------------------------------------------------ */
+.btn {
+  position: relative;
+  overflow: hidden;
+  padding: 3px 0;
+  display: inline-block; }
+
+.btn:before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-bottom: 2px solid currentColor;
+  transform: translateX(-101%);
+  transition: 500ms transform; }
+
+.btn:hover:before {
+  transform: translateX(0%); }
+
+.btn-circle {
+  border: none;
+  background-color: #ab8866;
+  padding: 5px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 500ms background-color; }
+
+.btn-circle:hover {
+  background-color: #fff; }
+
+.btn-circle svg {
+  color: #121212;
+  width: 20px;
+  height: 20px; }
+
+.header-buttons {
+  display: flex;
+  align-items: center; }

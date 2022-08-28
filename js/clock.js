@@ -35,11 +35,11 @@ setInterval(function () {
 		hours += 6;
 	}
 		seconds += 6
-        secondsArrow.style.transform = `rotate(${seconds}deg)`
-        minutesArrow.style.transform = `rotate(${minutes}deg)`
-        hoursArrow.style.transform = `rotate(${hours}deg)`
+		secondsArrow.style.transform = `rotate(${seconds}deg)`
+		minutesArrow.style.transform = `rotate(${minutes}deg)`
+		hoursArrow.style.transform = `rotate(${hours}deg)`
 
-        cog1Timer += 45
+		cog1Timer += 45
 		cog2Timer -= 90
 		cog3Timer += 25.71
 		cog4Timer -= 40
@@ -49,14 +49,14 @@ setInterval(function () {
 		cog8Timer -= 40
 		cogOrangeTimer += 20
 
-        cog1.style.transform = `rotate(${cog1Timer}deg)`
-        cog2.style.transform = `rotate(${cog2Timer}deg)`
-        cog3.style.transform = `rotate(${cog3Timer}deg)`
-        cog4.style.transform = `rotate(${cog4Timer}deg)`
-        cog5.style.transform = `rotate(${cog5Timer}deg)`
-        cog6.style.transform = `rotate(${cog6Timer}deg)`
-        cog7.style.transform = `rotate(${cog7Timer}deg)`
-        cog8.style.transform = `rotate(${cog8Timer}deg)`
-        cogOrange.style.transform = `rotate(${cogOrangeTimer}deg)`
+		cog1.style.transform = `rotate(${cog1Timer}deg)`
+		cog2.style.transform = `rotate(${cog2Timer}deg)`
+		cog3.style.transform = `rotate(${cog3Timer}deg)`
+		cog4.style.transform = `rotate(${cog4Timer}deg)`
+		cog5.style.transform = `rotate(${cog5Timer}deg)`
+		cog6.style.transform = `rotate(${cog6Timer}deg)`
+		cog7.style.transform = `rotate(${cog7Timer}deg)`
+		cog8.style.transform = `rotate(${cog8Timer}deg)`
+		cogOrange.style.transform = `rotate(${cogOrangeTimer}deg)`
 
-    }, 1000);
+	}, 1000);

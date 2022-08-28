@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------ *\
+	Field
+\* ------------------------------------------------------------ */
+
+.field {
+	font-family: 'Bernardo Moda Contrast', serif;
+	height: 40px;
+	width: 100%;
+	background-color: #121212;
+	padding-inline: 15px;
+	font-size: 28px;
+	color: rgb(171, 136, 102);
+	border: transparent;
+	border-bottom: 2px solid rgb(171, 136, 102);
+	border-top: 2px solid rgb(171, 136, 102);
+	transition: 500ms background-color;
+	border-radius: 10px;
+}
+
+.field:focus {
+	background-color: rgba(171, 136, 102, 0.1);
+}
+
+.field--textarea {
+	height: 150px;
+	padding: 15px;
+	resize: none;
+}
+
+::placeholder {
+	color: rgb(171, 136, 102);;
+}

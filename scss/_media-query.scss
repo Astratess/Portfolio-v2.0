@@ -1,0 +1,53 @@
+/* ------------------------------------------------------------ *\
+	Media
+\* ------------------------------------------------------------ */
+
+@media (max-width: 1200px) {
+	.projects-bg img,
+	.waterfall-bg img,
+	.waterfall-mask img {
+		object-fit: cover;
+	}
+}
+
+@media (max-width: 800px) {
+
+	.logo {
+		-webkit-text-stroke: 1px rgb(171, 136, 102);
+	}
+
+	.logo span {
+		display: none;
+	}
+
+	.nav li {
+		font-size: 1.4rem;
+	}
+
+	.nav li + li {
+		margin-left: 10px;
+	}
+
+	.btn--contact {
+		display: none;
+	}
+
+	.intro__inner,
+	.about-me__inner {
+		grid-template-columns: 1fr;
+	}
+
+
+	.crystal {
+		width:  87.5px;
+		height: 50px;
+	} 
+
+	.project {
+		width: 250px;
+	}
+
+	.header__inner {
+		justify-content: center;
+	}
+}

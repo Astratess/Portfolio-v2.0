@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+	Header
+\* ------------------------------------------------------------ */
+
+.header {
+	font-family: 'Bernardo Moda Contrast', serif;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 10px 0;
+	border-bottom: 2px solid rgba(171, 136, 102, 0.6);;
+	z-index: 20;
+	transform: translateY(-101%);
+	animation: 2s fade-down 2s ease-in forwards;
+}
+
+@keyframes fade-down {
+	from {
+		opacity: 0;
+		transform: translateY(-101%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.header__inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* ------------------------------------------------------------ *\
+	Logo
+\* ------------------------------------------------------------ */
+
+.logo {
+	font-family: 'Ananda', cursive;
+	font-size: 2.5rem;
+	letter-spacing: 0.02em;
+	color: #fff;
+	-webkit-text-stroke: 0px transparent;
+	margin-right: 30px;
+}
+
+.logo span {
+	color: transparent;
+	-webkit-text-stroke: 0.5px rgb(171, 136, 102);;
+	transition: 500ms color, 500ms -webkit-text-stroke;
+}
+
+.logo:hover span {
+	color: #fff;
+	-webkit-text-stroke: 0.5px transparent;
+}
+
+/* ------------------------------------------------------------ *\
+	Nav
+\* ------------------------------------------------------------ */
+
+.nav li {
+	display: inline-block;
+}
+
+.nav li + li {
+	margin-left: 45px;
+}

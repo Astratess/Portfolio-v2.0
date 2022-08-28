@@ -1,0 +1,162 @@
+/* ------------------------------------------------------------ *\
+	Projects
+\* ------------------------------------------------------------ */
+
+.projects {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	background-color: #121212;
+}
+
+.projects-bg img {
+	position: absolute;
+	left: 0;
+	top: -1px;
+	width: 100%;
+	height: 100%;
+}
+
+.crystal-box {
+	position: absolute;
+}
+
+.crystal-box--1 {
+	right: 30%;
+	bottom: 20%;
+	animation: 5s float 1s ease-in-out infinite;
+}
+
+.crystal-box--2 {
+	right: 60%;
+	bottom: 40%;
+	animation: 5s float2 ease-in-out infinite;
+}
+
+.crystal-box--3 {
+	right: 20%;
+	bottom: 65%;
+	animation: 5s float3 2s ease-in-out infinite;
+}
+
+.crystal-box:hover .crystal,.crystal-box:focus .crystal {
+	filter: drop-shadow(0 0 50px goldenrod) brightness(1.3);
+}
+
+.crystal {
+	width: 175px;
+	height: 100px;
+	transition: 500ms filter;
+}
+
+.crystal img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* ------------------------------------------------------------ *\
+	Projects - lives inside crystal
+\* ------------------------------------------------------------ */
+
+.project {
+	position: absolute;
+	right: -75%;
+	top: 90%;
+	font-size: 16px;
+	color: #fff;
+	width: 500px;
+	padding-bottom: 30px;
+	overflow: hidden;
+}
+
+.project__inner {
+	display: flex;
+	gap: 20px;
+	padding: 5px;
+	transform: translateY(-101%) scale(0);
+	transition: 1000ms transform;
+	/*background-color: rgba(0, 0, 0, 0.4);*/
+	border-radius: 10px;
+}
+
+.crystal-box:hover .project__inner {
+	transform: translateY(10%) scale(1.0);
+}
+
+.crystal-box-2:hover .project__inner {
+	transform: translateY(10%) scale(1.0);
+}
+
+.crystal-box-3:hover .project__inner {
+	transform: translateY(10%) scale(1.0);
+}
+
+.crystal-box .project__inner,
+.crystal-box-3 .project__inner {
+	flex-direction: row-reverse;
+	text-align: right;
+}
+
+.crystal-box-2 .project {
+	right: auto;
+	left: -75%;
+}
+
+.project__content {
+	flex: 0 0 50%;
+}
+
+.project__media {
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 16 / 9;
+}
+
+.project__media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@keyframes float {
+	0% {
+		transform: translateY(0px) rotate(10deg);;
+	}
+
+	50% {
+		transform: translateY(-15px) rotate(10deg);;
+	}
+
+	100% {
+		transform: translateY(0px) rotate(10deg);;
+	}
+}
+
+@keyframes float2 {
+	0% {
+		transform: translateY(0px) rotate(-10deg) scale(0.75);
+	}
+
+	50% {
+		transform: translateY(-15px) rotate(-10deg) scale(0.75);
+	}
+
+	100% {
+		transform: translateY(0px) rotate(-10deg) scale(0.75);
+	}
+}
+
+@keyframes float3 {
+	0% {
+		transform: translateY(0px) rotate(10deg) scale(0.85);
+	}
+
+	50% {
+		transform: translateY(-15px) rotate(10deg) scale(0.85);
+	}
+
+	100% {
+		transform: translateY(0px) rotate(10deg) scale(0.85);
+	}
+}

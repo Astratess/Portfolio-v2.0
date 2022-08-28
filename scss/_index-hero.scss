@@ -1,0 +1,55 @@
+/* ------------------------------------------------------------ *\
+	Hero
+\* ------------------------------------------------------------ */
+
+.hero {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	z-index: -1;
+}
+
+.hero-bg img {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover; 
+	z-index: 1; 
+	animation: 4s fade-hero ease-in-out;
+}
+
+@keyframes fade-hero {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.hero-bg-z1 img {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 2;
+}
+
+.hero__inner {
+	text-align: center;
+	padding-top: 20vh;
+}
+
+.hero__inner h1 {
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	animation: 3s fade-hero 4s ease-in forwards;
+}
