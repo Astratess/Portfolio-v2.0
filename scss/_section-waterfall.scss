@@ -28,3 +28,10 @@
 	object-position: bottom right;
 	display: block;
 }
+
+@media (max-width: 1200px) {
+	.waterfall-bg img,
+	.waterfall-mask img {
+		object-fit: cover;
+	}
+}

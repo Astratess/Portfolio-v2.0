@@ -35,6 +35,12 @@
 	align-items: center;
 }
 
+@media (max-width: 800px) {
+	.header__inner {
+		justify-content: center;
+	}
+}
+
 /* ------------------------------------------------------------ *\
 	Logo
 \* ------------------------------------------------------------ */
@@ -59,6 +65,16 @@
 	-webkit-text-stroke: 0.5px transparent;
 }
 
+@media (max-width: 800px) {
+	.logo {
+		-webkit-text-stroke: 1px rgb(171, 136, 102);
+	}
+
+	.logo span {
+		display: none;
+	}
+}
+
 /* ------------------------------------------------------------ *\
 	Nav
 \* ------------------------------------------------------------ */
@@ -69,4 +85,14 @@
 
 .nav li + li {
 	margin-left: 45px;
+}
+
+@media (max-width: 800px) {
+	.nav li {
+		font-size: 1.4rem;
+	}
+
+	.nav li + li {
+		margin-left: 10px;
+	}
 }

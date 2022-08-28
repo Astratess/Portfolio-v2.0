@@ -12,6 +12,12 @@
   box-sizing: inherit; }
 
 /* ------------------------------------------------------------ *\
+	Variables
+\* ------------------------------------------------------------ */
+:root {
+  --color-primary: #ab8866; }
+
+/* ------------------------------------------------------------ *\
 	Fonts
 \* ------------------------------------------------------------ */
 @font-face {
@@ -208,6 +214,9 @@ h6 {
   justify-content: space-between;
   align-items: center; }
 
+@media (max-width: 800px) {
+  .header__inner {
+    justify-content: center; } }
 /* ------------------------------------------------------------ *\
 	Logo
 \* ------------------------------------------------------------ */
@@ -228,6 +237,12 @@ h6 {
   color: #fff;
   -webkit-text-stroke: 0.5px transparent; }
 
+@media (max-width: 800px) {
+  .logo {
+    -webkit-text-stroke: 1px #ab8866; }
+
+  .logo span {
+    display: none; } }
 /* ------------------------------------------------------------ *\
 	Nav
 \* ------------------------------------------------------------ */
@@ -237,6 +252,12 @@ h6 {
 .nav li + li {
   margin-left: 45px; }
 
+@media (max-width: 800px) {
+  .nav li {
+    font-size: 1.4rem; }
+
+  .nav li + li {
+    margin-left: 10px; } }
 /* ------------------------------------------------------------ *\
 	Button
 \* ------------------------------------------------------------ */
@@ -363,6 +384,9 @@ h6 {
   transform: translateY(-20px);
   box-shadow: 0px 0px 10px #e29c1a; }
 
+@media (max-width: 800px) {
+  .intro__inner {
+    grid-template-columns: 1fr; } }
 /* ------------------------------------------------------------ *\
 	About me
 \* ------------------------------------------------------------ */
@@ -381,6 +405,9 @@ h6 {
 .about-me__content {
   text-align: center; }
 
+@media (max-width: 800px) {
+  .about-me__inner {
+    grid-template-columns: 1fr; } }
 /* ------------------------------------------------------------ *\
 	Clock
 \* ------------------------------------------------------------ */
@@ -605,6 +632,16 @@ h6 {
     transform: translateY(-15px) rotate(10deg) scale(0.85); }
   100% {
     transform: translateY(0px) rotate(10deg) scale(0.85); } }
+@media (max-width: 1200px) {
+  .projects-bg img {
+    object-fit: cover; } }
+@media (max-width: 800px) {
+  .crystal {
+    width: 87.5px;
+    height: 50px; }
+
+  .project {
+    width: 250px; } }
 /* ------------------------------------------------------------ *\
 	Section-content
 \* ------------------------------------------------------------ */
@@ -638,6 +675,10 @@ h6 {
   object-position: bottom right;
   display: block; }
 
+@media (max-width: 1200px) {
+  .waterfall-bg img,
+  .waterfall-mask img {
+    object-fit: cover; } }
 /* ------------------------------------------------------------ *\
 	Waterfall
 \* ------------------------------------------------------------ */
@@ -901,32 +942,3 @@ h6 {
   .waterfall-bg img,
   .waterfall-mask img {
     object-fit: cover; } }
-@media (max-width: 800px) {
-  .logo {
-    -webkit-text-stroke: 1px #ab8866; }
-
-  .logo span {
-    display: none; }
-
-  .nav li {
-    font-size: 1.4rem; }
-
-  .nav li + li {
-    margin-left: 10px; }
-
-  .btn--contact {
-    display: none; }
-
-  .intro__inner,
-  .about-me__inner {
-    grid-template-columns: 1fr; }
-
-  .crystal {
-    width: 87.5px;
-    height: 50px; }
-
-  .project {
-    width: 250px; }
-
-  .header__inner {
-    justify-content: center; } }

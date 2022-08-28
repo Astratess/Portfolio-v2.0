@@ -1,12 +1,7 @@
 /* ------------------------------------------------------------ *\
-	Media
+	Variables
 \* ------------------------------------------------------------ */
 
-@media (max-width: 1200px) {
-	.projects-bg img,
-	.waterfall-bg img,
-	.waterfall-mask img {
-		object-fit: cover;
-	}
+:root {
+	--color-primary: #ab8866;
 }
-

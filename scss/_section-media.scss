@@ -1,0 +1,106 @@
+.section-media {
+	padding-bottom: 100px;
+
+	.section__head {
+		width: 90%;
+		padding: 10px 70px;
+		color: #121212;
+		background-color: var(--color-primary);
+		border-radius: 0px 10px 40px 0px;
+		text-align: right;
+	}
+
+	.section__head h2 {
+		font-family: 'Bernardo Moda Contrast', serif;
+		letter-spacing: 0.05em;
+	}
+
+	.section__inner {
+		padding: 40px 0;
+		display: grid;
+		grid-template-areas: 
+		"a- a- b- c-"
+		"a- a- d- c-"
+		"e- f- g- g-"
+		"i- h- g- g-"
+		"l- h- j- k-"
+		"l- m- j- k-" ;
+		gap:20px;
+
+	:nth-child(1) {
+		grid-area: a-;
+	}
+
+	:nth-child(2) {
+		grid-area: b-;
+	}
+
+	:nth-child(3) {
+		grid-area: c-;
+	}
+
+	:nth-child(4) {
+		grid-area: d-;
+	}
+
+	:nth-child(5) {
+		grid-area: e-;
+	}
+
+	:nth-child(6) {
+		grid-area: f-;
+	}
+
+	:nth-child(7) {
+		grid-area: g-;
+	}
+
+	:nth-child(8) {
+		grid-area: h-;
+	}
+
+	:nth-child(9) {
+		grid-area: i-;
+	}
+
+	:nth-child(10) {
+		grid-area: j-;
+	}
+
+	:nth-child(11) {
+		grid-area: k-;
+	}
+
+	:nth-child(12) {
+		grid-area: l-;
+	}
+
+	:nth-child(13) {
+		grid-area: m-;
+	}
+	}
+}
+
+.section-media:nth-child(even) 	.section__head {
+		margin-left: auto;
+		text-align: left;
+		border-radius: 10px 0px 0px 40px;
+	}
+
+@media (max-width: 800px) {
+	.section-media {
+		.section__inner {
+		grid-template-areas: 
+		"a- a-" 
+		"b- c-"
+		"d- c-"
+		"e- f-"
+		"g- g-"
+		"i- h-"
+		"j- h-" 
+		"j- k-"
+		"l- k-"
+		"l- m-";
+		}
+	}
+}

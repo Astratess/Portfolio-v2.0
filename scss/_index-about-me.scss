@@ -19,3 +19,9 @@
 .about-me__content{
 	text-align: center;
 }
+
+@media (max-width: 800px) {
+	.about-me__inner {
+		grid-template-columns: 1fr;
+	}
+}
