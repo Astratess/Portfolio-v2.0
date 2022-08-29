@@ -7,6 +7,6 @@ function loadScript(url)
     head.appendChild(script);
 }
 
-loadScript('/js/clock.js')
-loadScript('/js/modal.js')
-loadScript('/js/sound.js')
+loadScript('js/clock.js')
+loadScript('js/modal.js')
+loadScript('js/sound.js')
